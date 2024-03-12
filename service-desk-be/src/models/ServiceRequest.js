@@ -9,7 +9,7 @@ const validateEmail = (value)=>{
 const serviceRequestSchema = new mongoose.Schema({
     no:{
         type:String,
-        default: `SR${Math.floor(+new Date()/1000)}`
+        required:true
     },
     name:{
         type:String,
@@ -19,7 +19,6 @@ const serviceRequestSchema = new mongoose.Schema({
     email:{
         type:String,
         required:true,
-        unique:true,
         validate:{
             validator:validateEmail,
             message:props=>`${props.value} is Invalid Email`
@@ -76,6 +75,6 @@ const serviceRequestSchema = new mongoose.Schema({
     collection:'service-requests'
 })
 
-const ServiceRequestModel = mongoose.model('service-requests',serviceRequestSchema)
+const SRModel = mongoose.model('service-requests',serviceRequestSchema)
 
-export default ServiceRequestModel
+export default SRModel
