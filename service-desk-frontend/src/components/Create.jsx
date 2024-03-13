@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Header from './Header'
 function Create() {
-  return (
-    <div>Create</div>
-  )
+  return <>
+    <Header/>
+  </>
 }
 
 export default Create

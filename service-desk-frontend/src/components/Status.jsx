@@ -1,8 +1,9 @@
 import React from 'react'
+import Header from './Header'
 function Status() {
-  return (
-    <div>Status</div>
-  )
+  return<>
+  <Header/>
+  </>
 }
 
 export default Status

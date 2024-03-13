@@ -7,7 +7,7 @@ User
 4. User should be able to track their ticket status any time - Done
 
 Admin
-1. Ability to signin to the dashboard - API Done
+1. Ability to signin to the dashboard - Done
 2. See the list of all open tickets, In-progress tickets and Done - API Done
 3. Ability to get a ticket assigned to themselves (Open to In Progress) -API Done
 4. Ability to move a ticket from In-Progress to Done with a resolution - API Done
