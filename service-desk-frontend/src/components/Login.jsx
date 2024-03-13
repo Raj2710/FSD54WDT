@@ -5,6 +5,7 @@ import AxiosService from '../utils/AxiosService'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
+import ApiRoutes from '../utils/ApiRoutes';
 function Login() {
 
   const navigate = useNavigate()
@@ -19,7 +20,9 @@ function Login() {
     const formData = new FormData(e.target);
     const formProps = Object.fromEntries(formData);
 
-    let res = await AxiosService.post('/users/login',formProps)
+    let res = await AxiosService.post(ApiRoutes.USER_LOGIN.path,formProps,{
+      authenticate:ApiRoutes.USER_LOGIN.authenticate
+    })
     if(res.status===200)
     {
       sessionStorage.setItem('token',res.data.token)

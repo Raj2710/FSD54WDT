@@ -4,10 +4,14 @@ const dashboardCount = async(req,res)=>{
         let data = await SRModel.aggregate([{
             $group:{_id:"$status",count:{$sum:1}}
           }])
-        console.log(data)
+        let count = {}
+        data.forEach((e)=>{
+            count[e._id]= e.count
+        })
+
         res.status(200).send({
             message:"Data Fetch Successful",
-            data
+            data:count
         })
     }
     catch(error)

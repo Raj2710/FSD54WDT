@@ -2,23 +2,23 @@ import sgMail from '@sendgrid/mail'
 
 const sendMail = async(email,html,subject)=>{
 
-    sgMail.setApiKey(process.env.SG_API_KEY)
+    // sgMail.setApiKey(process.env.SG_API_KEY)
     
-    const msg = {
-        to: email, // Change to your recipient
-        from: process.env.FROM_EMAIL, // Change to your verified sender
-        subject: subject,
-        text: html,
-        html: html,
-      }
-      sgMail
-        .send(msg)
-        .then(() => {
-          console.log('Email sent')
-        })
-        .catch((error) => {
-          console.error(error)
-        })
+    // const msg = {
+    //     to: email, // Change to your recipient
+    //     from: process.env.FROM_EMAIL, // Change to your verified sender
+    //     subject: subject,
+    //     text: html,
+    //     html: html,
+    //   }
+    //   sgMail
+    //     .send(msg)
+    //     .then(() => {
+    //       console.log('Email sent')
+    //     })
+    //     .catch((error) => {
+    //       console.error(error)
+    //     })
 
 }
 

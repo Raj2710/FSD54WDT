@@ -6,6 +6,7 @@ import Dashboard from '../components/admin/Dashboard'
 import Service from '../components/admin/Service'
 import Users from '../components/admin/Users'
 import SuperAdminProtectedRoute from './SuperAdminProtectedRoute'
+import AdminRoutes from './AdminRoutes'
 import { Navigate } from 'react-router-dom'
 const Approutes = [
     {
@@ -26,11 +27,11 @@ const Approutes = [
     },
     {
         path:'/admin/dashboard',
-        element:<Dashboard/>
+        element:<AdminRoutes><Dashboard/></AdminRoutes>
     },
     {
         path:'/admin/service/:id',
-        element:<Service/>
+        element:<AdminRoutes><Service/></AdminRoutes>
     },
     {
         path:'/admin/users',
